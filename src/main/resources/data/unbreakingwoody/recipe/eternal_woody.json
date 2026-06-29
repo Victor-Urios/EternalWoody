@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "S",
+    "L",
+    "S"
+  ],
+  "key": {
+    "S": { "item": "minecraft:nether_star" },
+    "L": { "tag": "minecraft:logs" }
+  },
+  "result": {
+    "id": "unbreakingwoody:eternal_woody",
+    "count": 1
+  }
+}

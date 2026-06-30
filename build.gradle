@@ -4,7 +4,7 @@ plugins {
 }
 
 group   = 'com.unbreakingwoody'
-version = '0.0.1'
+version = '0.0.2'
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -31,7 +31,7 @@ jar {
         attributes([
             'Specification-Title'   : 'unbreakingwoody',
             'Specification-Vendor'  : 'unbreakingwoody',
-            'Specification-Version' : '0.0.1',
+            'Specification-Version' : '0.0.2',
             'Implementation-Title'  : project.name,
             'Implementation-Version': project.version,
             'Implementation-Vendor' : 'unbreakingwoody',

@@ -11,7 +11,6 @@ import java.util.List;
 
 public class EternalWoodyItem extends Item {
 
-    // fakying rainbow effect!
     private static final ChatFormatting[] RAINBOW = {
             ChatFormatting.RED,
             ChatFormatting.GOLD,
@@ -28,14 +27,13 @@ public class EternalWoodyItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        // Enchanted thinggie!
         return true;
     }
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-        tooltipComponents.add(rainbowText("amigo estou aqui~ amigo estou aqui~"));
+        tooltipComponents.add(rainbowText("amigo estou aqui~"));
     }
 
     private static MutableComponent rainbowText(String text) {

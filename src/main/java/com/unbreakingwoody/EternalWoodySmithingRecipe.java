@@ -23,7 +23,6 @@ public class EternalWoodySmithingRecipe implements SmithingRecipe {
 
     @Override
     public boolean isTemplateIngredient(ItemStack stack) {
-        // Template slot must be EMPTY no template item required
         return stack.isEmpty();
     }
 
@@ -52,6 +51,10 @@ public class EternalWoodySmithingRecipe implements SmithingRecipe {
         ItemStack result = input.base().copy();
         // showInTooltip=true displays "Unbreakable" in the item tooltip
         result.set(DataComponents.UNBREAKABLE, new Unbreakable(true));
+        // a marcação do item é feito a partir do momento que é colocada na smithing table
+        // como isso vai ficar na NBT do item
+        // a anvil não vai remover o efeito de arco-iro dele.
+        result.set(ModDataComponents.RAINBOW_NAME.get(), net.minecraft.util.Unit.INSTANCE);
         return result;
     }
 
@@ -71,8 +74,6 @@ public class EternalWoodySmithingRecipe implements SmithingRecipe {
     public RecipeType<?> getType() {
         return RecipeType.SMITHING;
     }
-
-    //Serial
 
     public static class Serializer implements RecipeSerializer<EternalWoodySmithingRecipe> {
 

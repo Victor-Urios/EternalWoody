@@ -15,6 +15,7 @@ public class UnbreakingWoodyMod {
         ModItems.ITEMS.register(modEventBus);
         ModItems.CREATIVE_TABS.register(modEventBus);
         ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
+        ModDataComponents.DATA_COMPONENTS.register(modEventBus);
         LOGGER.info("[UnbreakingWoody] Mod initialized.");
     }
 }
